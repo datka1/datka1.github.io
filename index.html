@@ -375,16 +375,24 @@
         <!--Jquery 2.1 不支持ie6、7、8-->
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 
-       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       
 
         <!--jquery 动画-->
         <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 
-		<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
+    <script type="text/javascript">  
+        function googleTranslateElementInit() {  
+            new google.translate.TranslateElement( 
+                {pageLanguage: 'en'},  
+                'google_translate_element' 
+            );  
+        }  
+    </script>  
+      
+    <script type="text/javascript" src= 
+"https://translate.google.com/translate_a/element.js? 
+        cb=googleTranslateElementInit"> 
+    </script>  
 
     
         <!--jquery loadding-->
