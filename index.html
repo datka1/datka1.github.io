@@ -1,386 +1,397 @@
-<html lang="en">
-  <head>
-	<title>Davit Miruashvili</title>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
-	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-<!-- The Timeline -->
-<style>
-body {	
-  margin: 0;
-  padding: 0;
-  background: rgb(230,230,230);
-  
-  color: rgb(50,50,50);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 112.5%;
-  line-height: 1.6em;
-}
+<!DOCTYPE html>
+<html>
 
-/* ================ The Timeline ================ */
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="davit miruashvili" />
+        <meta name="description" content="Personal Resume" />
 
-.timeline {
-  position: relative;
-  width: 660px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 1em 0;
-  list-style-type: none;
-}
+        <!--favicon-->
+        <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
-.timeline:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: ' ';
-  display: block;
-  width: 6px;
-  height: 100%;
-  margin-left: -3px;
-  background: rgb(80,80,80);
-  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  
-  z-index: 5;
-}
+        <!--loading css-->
+        <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
 
-.timeline li {
-  padding: 1em 0;
-}
+        <!--css-->
+        <link href="css/style.css" rel="stylesheet">
 
-.timeline li:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+        <!--css-->
+        <link href="css/responsive.css" rel="stylesheet">
 
-.direction-l {
-  position: relative;
-  width: 300px;
-  float: left;
-  text-align: right;
-}
+        <!--cdd-->
+        <link href="css/font.css" rel="stylesheet" type="text/css">
+		
 
-.direction-r {
-  position: relative;
-  width: 300px;
-  float: right;
-}
-
-.flag-wrapper {
-  position: relative;
-  display: inline-block;
-  
-  text-align: center;
-}
-
-.flag {
-  position: relative;
-  display: inline;
-  background: rgb(248,248,248);
-  padding: 6px 10px;
-  border-radius: 5px;
-  
-  font-weight: 600;
-  text-align: left;
-}
-
-.direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  content: ' ';
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-top: -10px;
-  background: #fff;
-  border-radius: 10px;
-  border: 4px solid rgb(255,80,80);
-  z-index: 10;
-}
-
-.direction-r .flag:before {
-  left: -40px;
-}
-
-.direction-l .flag:after {
-  content: "";
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-left-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.direction-r .flag:after {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-right-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.time-wrapper {
-  display: inline;
-  
-  line-height: 1em;
-  font-size: 0.66666em;
-  color: rgb(250,80,80);
-  vertical-align: middle;
-}
-
-.direction-l .time-wrapper {
-  float: left;
-}
-
-.direction-r .time-wrapper {
-  float: right;
-}
-
-.time {
-  display: inline-block;
-  padding: 4px 6px;
-  background: rgb(248,248,248);
-}
-
-.desc {
-  margin: 1em 0.75em 0 0;
-  
-  font-size: 0.77777em;
-  font-style: italic;
-  line-height: 1.5em;
-}
-
-.direction-r .desc {
-  margin: 1em 0 0 0.75em;
-}
-
-/* ================ Timeline Media Queries ================ */
-
-@media screen and (max-width: 660px) {
-
-.timeline {
- 	width: 100%;
-	padding: 4em 0 1em 0;
-}
-
-.timeline li {
-	padding: 2em 0;
-}
-
-.direction-l,
-.direction-r {
-	float: none;
-	width: 100%;
-
-	text-align: center;
-}
-
-.flag-wrapper {
-	text-align: center;
-}
-
-.flag {
-	background: rgb(255,255,255);
-	z-index: 15;
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: -30px;
-	left: 50%;
-	content: ' ';
-	display: block;
-	width: 12px;
-	height: 12px;
-	margin-left: -9px;
-	background: #fff;
-	border-radius: 10px;
-	border: 4px solid rgb(255,80,80);
-	z-index: 10;
-}
-
-.direction-l .flag:after,
-.direction-r .flag:after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -8px;
-	height: 0;
-	width: 0;
-	margin-left: -8px;
-	border: solid transparent;
-	border-bottom-color: rgb(255,255,255);
-	border-width: 8px;
-	pointer-events: none;
-}
-
-.time-wrapper {
-	display: block;
-	position: relative;
-	margin: 4px 0 0 0;
-	z-index: 14;
-}
-
-.direction-l .time-wrapper {
-	float: none;
-}
-
-.direction-r .time-wrapper {
-	float: none;
-}
-
-.desc {
-	position: relative;
-	margin: 1em 0 0 0;
-	padding: 1em;
-	background: rgb(245,245,245);
-	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	box-shadow: 0 0 1px rgba(0,0,0,0.20);
+        <title>Resume: Davit Miruashvili</title>
+    </head>
+    <body>
 	
-  z-index: 15;
-}
+        <div class="main">
+            <div class="content">
 
-.direction-l .desc,
-.direction-r .desc {
-	position: relative;
-	margin: 1em 1em 0 1em;
-	padding: 1em;
-	
-  z-index: 15;
-}
-
-}
-
-@media screen and (min-width: 400px ?? max-width: 660px) {
-
-.direction-l .desc,
-.direction-r .desc {
-	margin: 1em 4em 0 4em;
-}
-
-}
-
-</style>
-
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
- </head>
- 
-<!-- The Timeline -->
-
-<ul class="timeline">
-
-
-	<!-- Main Block -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><span class="fa fa-male" aria-hidden="true"></span> ABOUT ME</span>
+                <!--header-->
+                <div class="header clearfix">
+                    <div class="avatar">
+                        <a class="avatar_pic circle"><em class="circle doing">DM</em></a>
+                        <b class="doing r5">IT</b>
+                    </div>
+                    <div class="base">
+                        <p class="desc">Hello, my name is</p>
+                        <h2>Davit Miruashvili</h2>
+                        <p>IT Specialist / Engineer</p>
+                        <span>
+                            <p><i data-icon="&#xe089;"></i>Georgia/Tbilisi</p>
+                            <p><i data-icon="&#xe00b;"></i><a href="tel:+995-593-33-86-55">593 33 86 55</a></p>
+							<p><i data-icon="&#xe010;"></i><a href="mailto:webmaster@example.com">datka@live.ru</a></p>
+							<p><i data-icon="&#xe0aa;"></i><a href="https://www.facebook.com/dav.miru">fb.me/dav.miru</a></p>
+							<p><i data-icon="&#xe00d;"></i><a href="https://github.com/datka1">Github/datka1</a></p>
+							<div id="google_translate_element"></div>
+							
+							
+                        </span>
+                    </div>
+                </div>
 				
-			</div>
-			
-			<div class="desc">
-			<img src="https://sun1-8.userapi.com/c840739/v840739962/3f848/sEXAKyHFsKw.jpg" alt="Card image" style="width:45%"><p>
-			<span class="fa fa-user-circle" aria-hidden="true"></span><b> Davit Miruashvili</b><p>
-			<span class="fa fa-phone" aria-hidden="true"></span> 593 338 655<p>
-			<span class="fa fa-calendar" aria-hidden="true"></span> 4 December 1990<p>
-			<span class="fa fa-map" aria-hidden="true"></span> Georgia \\ Tbilisi<p>
-			<span class="fa fa-car" aria-hidden="true"></span> Category B, From 04.10.2010<p>
-			<span class="fa fa-leanpub" aria-hidden="true"></span> Ability to learn quickly<p>
-			<span class="fa fa-globe" aria-hidden="true"></span> Georgian,Russian,English<p>
-			<span class="fa fa-github" aria-hidden="true"></span><a href="https://github.com/datka1"> https://github.com/datka1</a><p>
-			<div id="google_translate_element"></div><script type="text/javascript">
+
+                <!--information-->
+                <div class="information clearfix">
+
+                    <!--left-->
+                   <div class="info_area info_left info_content">
+
+                        <h5><i aria-hidden="true" data-icon="&#x68;"></i> My Story</h5>
+                        <p class="desc">I was born in December 1990 in Georgia, Tbilisi</p>
+                        <!-- s1~s5 -->
+                        <p class="desc s5">In 1996, I began studying at the 9th Pushkin Gymnasium, by the end of my studies it was renamed 72 Public School. Studied in Russian.</p>
+                        <p class="desc s4">After finishing school I started studying at the Georgian Technical University at the Department of Computer Systems and Networks, I also studied in Russian.</p>
+                        <p class="desc s3">After receiving my diploma, I was accepted as an intern at the Georgian Railway. After working there for a year and accumulating knowledge, I began to look for full-time job.</p>
+                        <p class="desc s2">Having worked for 2 years as an IT Specialist, company began to draw me into business processes.</p>
+                        <p class="desc">I am self taught and learn fast.</p>
+
+                        <h5>Experience/Projects</h5>
+                        <ul>
+                            <li class="clearfix">
+                                <div class="con">
+                                    <h3><i aria-hidden="true" data-icon="&#xe0e5;"></i>Data analysis<em>(Company Project)</em></h3>
+                                    <p>Collecting data from different sources using scripts/manual. Giving the required format. Further data analysis.</p>
+                                </div>
+                                
+                            </li>
+                            <li class="clearfix">
+                                <div class="con">
+                                    <h3><i aria-hidden="true" data-icon="&#xe029;"></i>Business  analysis<em>(Company Project)</em></h3>
+                                    <p>Calculation of Individual Performance.</p>
+                                </div>
+                                
+                            </li>
+                            <li class="clearfix">
+                                <div class="con">
+                                    <h3><i aria-hidden="true" data-icon="&#xe081;"></i>Tracking Managment<em>(Company Project)</em></h3>
+                                    <p>Organization and Managment tracking software on windows/linux sever for android/ios devices in real time.</p>
+                                </div>
+                                
+                            </li>
+                            <li class="clearfix">
+                                <div class="con">
+                                    <h3><i aria-hidden="true" data-icon="&#xe093;"></i>Company Facebook Page Managment<em>(Company Project)</em></h3>
+                                    <p>Managing Ads. Analysing Statistics.</p>
+                                </div>
+                               
+                            </li>
+                            <li class="clearfix">
+                                <div class="con">
+                                    <h3><i aria-hidden="true" data-icon="&#xe059;"></i>Scripts and Projects<em>(Personal Project)</em></h3>
+                                    <p>Personal collection of scripts that makes my life and work easier. Workflow automation. Parsing data from web sites. Storing data in databases. For fun and science.</p>
+                                </div>
+                            
+                            </li>
+              
+                        </ul>
+
+
+  
+                    </div>
+
+                    <!--right-->
+                    <div class="info_area info_right info_timeline">
+                        <h5><i aria-hidden="true" data-icon="&#x7d;"></i>My Timeline</h5>
+                        <ul>
+                            <li class="clearfix top" id="s5">
+                                <!--list-->
+                                <div class="dot"><b></b></div>
+                               
+                                <div class="con">
+									<h3><i aria-hidden="true" data-icon="&#xe086;"></i> SCHOOL</h3>
+                                    <p>Tbilisi Public School # 72</p>
+                                    <p class="desc">1996 – 2008</p>
+                                    
+                                </div>
+                            </li>
+                            <li class="clearfix" id="s4">
+                              
+                                <div class="dot"><b></b></div>
+                                
+                                <div class="con">
+									<h3 data-icon="&#xe072;"> EDUCATION</h3>
+                                    <p>Georgian Technical University</p>
+                                    <p class="desc">2008 – 2012</p>
+                                    
+                                </div>
+                            </li>
+                            <li class="clearfix" id="s3">
+                                
+                                <div class="dot"><b></b></div>
+                                
+                                <div class="con">
+									<h3 data-icon="&#xe0f9;"> FIRST WORK EXPERIENCE</h3>
+                                    <p>Georgian Railway / Trainee</p>
+                                    <p class="desc">2011 - 2012</p>
+                                    
+                                </div>
+                            </li>
+                            <li class="clearfix" id="s2">
+                                <!--list-->
+                                <div class="dot"><b></b></div>
+                              
+                                <div class="con">
+									<h3 data-icon="&#xe085;"> WORK EXPERIENCE</h3>
+                                    <p>International Pharmaceutical Marketing Company ASFARMA</p>
+                                    <p class="desc">2012 - present</p>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <h5>Skills</h5>
+				
+                        <dl class="clearfix">
+                            <dt><h6><i aria-hidden="true" data-icon="&#xe00d;"></i>Web<h6></dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>HTML<em>5</em> & CSS<em>3</em></dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Javascript & Jquery</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Bootstrap & Foundation</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Less</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix mt20">
+                            <dt><h6><i aria-hidden="true" data-icon="&#xe00b;"></i>Phone & Pad<h6></dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Phonegap</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Jqmobi (App Framework)</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Ionic (App Framework)</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix mt20">
+                            <dt><h6><i aria-hidden="true" data-icon="&#xe007;"></i>Design Tools<h6></dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Adobe Fireworks</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Adobe Photoshop</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Adobe Illustrator</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                            </dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="footer clearfix">
+            Powered By LDuo
+            <a href="https://github.com/lduo/resume" target="_blank">嘿！如果你喜欢~我已放到github供大家免费下载</a>
+        </div>
+
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <!--Jquery 2.1 不支持ie6、7、8-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+       
+
+        <!--jquery 动画-->
+        <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+
+ 
+		<script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ka,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        
-			</div>
-		</div>
-	</li>
+</script>
+    
+       
 
-	
-	
-	
-	<!-- Item 1 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag"><span class="fa fa-briefcase" aria-hidden="true"></span> WORK EXPERIENCE</span>
-				<span class="time-wrapper"><span class="time">2012 - <b>present</b></span></span>
-			</div>
-			<div class="desc"><b>International Pharmaceutical Marketing Company ASFARMA</b><p>IT Specialist, Help Desk, Business Analyst, Data Analyst</div>
-		</div>
-	</li>
-  
-	<!-- Item 2 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><span class="fa fa-briefcase" aria-hidden="true"></span> WORK EXPERIENCE</span>
-				<span class="time-wrapper"><span class="time">2011 - 2012</span></span>
-			</div>
-			<div class="desc"><b>Georgian Railway</b><p>Branch: Information Technology – Trainee</div>
-		</div>
-	</li>
+        <!--effect-->
+        <script type="text/javascript" src="js/common.js"></script>
 
-	<!-- Item 3 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag"><span class="fa fa-university" aria-hidden="true"></span> EDUCATION</span>
-				<span class="time-wrapper"><span class="time">2008 – 2012</span></span>
-			</div>
-			<div class="desc"> <b>Georgian Technical University</b><p>Department of Computer Systems and Networks (Education Language Russian, Diploma: IT Specialist</div>
-		</div>
-	</li>
-	
-	<!-- Item 4 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><span class="fa fa-university" aria-hidden="true"></span> EDUCATION</span>
-				<span class="time-wrapper"><span class="time">1996 – 2008</span></span>
-			</div>
-			<div class="desc"><b>Tbilisi Public School # 72</b><p>Education Language Russian</div>
-		</div>
-	</li>
-  
-
-  
-</ul>
-
-        
+    </body>
+</html>
